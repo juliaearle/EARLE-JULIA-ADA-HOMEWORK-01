@@ -26,3 +26,17 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+> v <- "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
+> v
+[1] "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
+ > str_extract_all(v, boundary("word"))
+[[1]]
+ [1] "Four"        "score"       "and"         "seven"      
+ [5] "years"       "ago"         "our"         "fathers"    
+ [9] "brought"     "forth"       "on"          "this"       
+[13] "continent"   "a"           "new"         "nation"     
+[17] "conceived"   "in"          "Liberty"     "and"        
+[21] "dedicated"   "to"          "the"         "proposition"
+[25] "that"        "all"         "men"         "are"        
+[29] "created"     "equal"    
