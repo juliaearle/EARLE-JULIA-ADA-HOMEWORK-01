@@ -232,3 +232,68 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 [4,]  147  142  137  132  127
 [5,]  146  141  136  131  126
 
+> "Platyrrhini" <- list("Cebidae", "Atelidae", "Pitheciidae")
+> "Catarrhini" <- list("Cercopithecidae", "Hylobatidae", "Hominidae")
+> "Tarsioidea" <- list("Tarsiidae")
+> "Anthropoidea" <- list(Platyrrhini, Catarrhini)
+> "Haplorhini" <- list(Anthropoidea, Tarsioidea)
+> "Lorisoidea" <- list("Lorisidae", "Galagidae")
+> "Lemuroidea" <- list("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae")
+> "Strepsirhini" <- list(Lorisoidea, Lemuroidea)
+> "Primates" <- list(Haplorhini, Strepsirhini)
+> Primates
+[[1]]
+[[1]][[1]]
+[[1]][[1]][[1]]
+[[1]][[1]][[1]][[1]]
+[1] "Cebidae"
+
+[[1]][[1]][[1]][[2]]
+[1] "Atelidae"
+
+[[1]][[1]][[1]][[3]]
+[1] "Pitheciidae"
+
+
+[[1]][[1]][[2]]
+[[1]][[1]][[2]][[1]]
+[1] "Cercopithecidae"
+
+[[1]][[1]][[2]][[2]]
+[1] "Hylobatidae"
+
+[[1]][[1]][[2]][[3]]
+[1] "Hominidae"
+
+
+
+[[1]][[2]]
+[[1]][[2]][[1]]
+[1] "Tarsiidae"
+
+
+
+[[2]]
+[[2]][[1]]
+[[2]][[1]][[1]]
+[1] "Lorisidae"
+
+[[2]][[1]][[2]]
+[1] "Galagidae"
+
+
+[[2]][[2]]
+[[2]][[2]][[1]]
+[1] "Cheirogaleidae"
+
+[[2]][[2]][[2]]
+[1] "Lepilemuridae"
+
+[[2]][[2]][[3]]
+[1] "Indriidae"
+
+[[2]][[2]][[4]]
+[1] "Lemuridae"
+
+[[2]][[2]][[5]]
+[1] "Daubentoniidae"
