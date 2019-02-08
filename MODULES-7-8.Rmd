@@ -27,19 +27,13 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-> v <- "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
-> v
-[1] "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
- > str_extract_all(v, boundary("word"))
-[[1]]
- [1] "Four"        "score"       "and"         "seven"      
- [5] "years"       "ago"         "our"         "fathers"    
- [9] "brought"     "forth"       "on"          "this"       
-[13] "continent"   "a"           "new"         "nation"     
-[17] "conceived"   "in"          "Liberty"     "and"        
-[21] "dedicated"   "to"          "the"         "proposition"
-[25] "that"        "all"         "men"         "are"        
-[29] "created"     "equal"    
+> getty -> "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
+> library(stringr)
+> gettysburg <- c(str_split(getty, " ", simplify = TRUE))
+> b <- gettysburg[seq(from = 1, to = 30, by = 3)]
+> b
+ [1] "Four"       "seven"      "our"        "forth"      "continent,"
+ [6] "nation,"    "Liberty,"   "to"         "that"       "are"  
 
 > m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
 > m
@@ -64,3 +58,18 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 [7,]   15   23   47
 [8,]   16   24   48
 
+> x<-m[c(6:8),]
+> x
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+[1,]    6   14   22   30   38   46   54   62   70    78
+[2,]    7   15   23   31   39   47   55   63   71    79
+[3,]    8   16   24   32   40   48   56   64   72    80
+
+> x <- m[c(2:6), (2:9)]
+> x
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+[1,]   10   18   26   34   42   50   58   66
+[2,]   11   19   27   35   43   51   59   67
+[3,]   12   20   28   36   44   52   60   68
+[4,]   13   21   29   37   45   53   61   69
+[5,]   14   22   30   38   46   54   62   70
